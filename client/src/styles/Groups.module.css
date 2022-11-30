@@ -1,0 +1,58 @@
+.groupContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+
+.groupTitle{
+  margin-left: .5rem;
+  position: relative;
+}
+
+.groupTitle::before{
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 15px;
+  background-color: #27AE60;
+  left: -5px;
+  top: 6px;
+}
+
+.tableContainer{
+  width: 650px;
+  height: 50px;
+  border: 2px solid #27AE60;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 4px darkgray;
+}
+
+.headerContainer{
+  font-weight: bold;
+  color: rgba(0, 0, 0, .7);
+}
+
+.headerContainer > td{
+  padding-left: 3px;
+}
+
+.teamPicture{
+  width: 30px;
+}
+
+.teamNameAndPictureContainer{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding-left: 5px;
+}
+
+.tableCollumItem{
+  text-align: center;
+}
