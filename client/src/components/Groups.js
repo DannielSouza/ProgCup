@@ -16,24 +16,23 @@ const Groups = ({ data }) => {
   return (
     <section className={style.groupContainer}>
       {data.map((grupo, index) => {
-        console.log(grupo);
         return (
-          <table className={style.tableContainer} border="1">
+          <table className={style.tableContainer} border="0">
             <h3 className={style.groupTitle}>{grupos[index]}</h3>
 
 
             <tr className={style.headerContainer}>
-              <td>Times</td>
-              <td>Pontos</td>
-              <td>Jogos</td>
-              <td>Vitórias</td>
-              <td>Empates</td>
-              <td>Derrotas</td>
+              <td className={style.tableLineHeader}>Times</td>
+              <td className={style.tableLineHeader}>Pontos</td>
+              <td className={style.tableLineHeader}>Jogos</td>
+              <td className={style.tableLineHeader}>Vitórias</td>
+              <td className={style.tableLineHeader}>Empates</td>
+              <td className={style.tableLineHeader}>Derrotas</td>
             </tr>
 
             {grupo.map((time) => {
               return (
-                <tr>
+                <tr key={time.nome} className={style.lineItem}>
                   <td className={style.teamNameAndPictureContainer}>
                     <img className={style.teamPicture} src={time.bandeira} alt={`Bandeira do ${time.nome}`} />{" "}
                     {time.nome}

@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-top: 8rem;
 }
 
 .groupTitle{
@@ -33,10 +32,33 @@
   box-shadow: 0 2px 4px darkgray;
 }
 
+
+
 .headerContainer{
   font-weight: bold;
   color: rgba(0, 0, 0, .7);
 }
+
+.tableLineHeader{
+  border: none;
+  border-bottom: 2px solid darkgray;
+  
+}
+
+.tableCollumItem{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.lineItem{
+  transition: .2s;
+}
+
+.lineItem:hover{
+  background: rgba(39, 174, 96, .1);
+  cursor: default;
+}
+
 
 .headerContainer > td{
   padding-left: 3px;
@@ -47,12 +69,11 @@
 }
 
 .teamNameAndPictureContainer{
+  border-bottom: 1px solid lightgray;
   display: flex;
   align-items: center;
   gap: .5rem;
   padding-left: 5px;
 }
 
-.tableCollumItem{
-  text-align: center;
-}
+

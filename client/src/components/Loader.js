@@ -4,7 +4,7 @@ import React from "react";
 const Loader = () => {
   return (
     <div className="loaderContainer">
-      <svg width="100" height="100" viewBox="0 0 100 100">
+      <svg width="75" height="75" viewBox="0 0 100 100">
         <polyline
           className="line-cornered stroke-still"
           points="0,0 100,0 100,100"

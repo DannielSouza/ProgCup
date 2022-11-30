@@ -1,0 +1,70 @@
+.mainContainer{
+  background: #F1F1F1;
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+.mainTitle{
+  border-bottom: 2px solid black;
+  width: 250px;
+}
+
+
+.mainHeader{
+  margin-top: .2rem;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, .7);
+  font-size: .9rem;
+  padding: .1rem 0;
+}
+
+.listContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  align-items: center;
+  margin-bottom: .4rem;
+  border-bottom: 1px solid darkgray;
+  padding: .2rem 0 ;
+}
+
+.detailsContainer{
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  justify-content: space-between;
+}
+
+.playerPicture{
+  width: 40px;
+  border-radius: 50%;
+}
+
+.teamPicture{
+  width: 30px;
+}
+
+.playerDetails{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.playerDetails p{
+  font-weight: bold;
+  color: rgba(0, 0, 0, .8);
+  font-size: .9rem;
+}
+
+.playerDetails span{
+  font-weight: bold;
+  font-size: .5rem;
+  color: rgba(0, 0, 0, .5);
+  margin-top: -5px;
+}
+
+.golsContainer{
+  font-weight: bold;
+}
