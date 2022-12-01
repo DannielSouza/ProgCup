@@ -11,4 +11,4 @@ app.use('/', InfoRoutes)
 
 
 
-app.listen(4000, ()=>console.log('Server rodando na porta 4000'))
+app.listen(process.env.PORT || 4000, ()=>console.log('Server rodando na porta 4000'))
