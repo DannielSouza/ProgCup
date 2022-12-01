@@ -68,3 +68,27 @@
 .golsContainer{
   font-weight: bold;
 }
+
+@media (max-width: 1000px){
+  .mainContainer{
+    margin: 0 auto;
+  }
+
+  .mainHeader{
+    width: 500px;
+  }
+
+  .listContainer{
+    width: 500px;
+  }
+}
+
+@media (max-width: 750px){
+  .mainHeader{
+    width: 300px;
+  }
+
+  .listContainer{
+    width: 300px;
+  }
+}

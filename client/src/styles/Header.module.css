@@ -11,6 +11,16 @@
   z-index: 99;
 }
 
+#btnMobile{
+  display: none;
+}
+
+.menuMobileContainer{
+  width: 8px;
+  height: 4px;
+  background-color: white;
+}
+
 .headerContainer{
   display: flex;
   height: 100%;
@@ -31,7 +41,7 @@
   display: flex;
 }
 
-.menu a{
+.menuDesktop a{
   color: white;
   border-bottom: 2px solid transparent;
   transition: .3s;
@@ -39,13 +49,107 @@
   padding: 0 .2rem;
 }
 
-.menu a:hover{
+.menuDesktop a:hover{
   border-bottom: 2px solid #ABEBC6;
 }
 
 
-.menuItemDisabled{
+.menuDesktopItemDisabled{
   color: lightgray !important;
   pointer-events: none;
   cursor: not-allowed;
 }
+
+@media (max-width: 750px){
+  .menu{
+    display: none;
+  }
+  #btnMobile{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    gap: .5rem;
+    background: none;
+}
+
+#hamburger{
+    display: block;
+    width: 20px;
+    border-top: 3px solid;
+    color: white;
+}
+
+#hamburger::after, #hamburger::before{
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: currentColor;
+    display: block;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+#menuDesktop{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background-color: #202022;
+    height: 0;
+    z-index: 999999;
+    transition: .5s;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+#menuDesktop a{
+    display: block;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+}
+
+#menuDesktop a:hover{
+    text-shadow: none;
+}
+
+.mainContent img{
+    max-width: 400px;
+}
+
+#navId.active  #menuDesktop{
+    height: calc( 100vh - 5vh);
+    visibility: visible;
+    overflow-y: auto;
+}
+
+#navId.active #hamburger{
+    border-top-color: transparent ;
+}
+
+
+#navId.active #hamburger::before{
+    transform: rotate(135deg);
+}
+
+#navId.active #hamburger::after{
+    transform: rotate(-135deg);
+    top: -7.7px;
+}
+
+.header, .mainBackground{
+    animation-duration: 115s;
+}
+
+
+
+
+}
+
+
+

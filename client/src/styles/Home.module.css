@@ -6,3 +6,11 @@
   padding-left: 1rem;
   padding-bottom: 2rem;
 }
+
+@media (max-width: 1000px) {
+  .homeContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+}
