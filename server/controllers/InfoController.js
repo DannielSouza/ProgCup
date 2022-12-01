@@ -74,27 +74,6 @@ module.exports = class InfoController {
     }
     const bestPlayers = await getBestPlayers()
     const teamsWithDatas = await getTeamsInfo()
-    res.send({topPlayers: bestPlayers, topTeams: teamsWithDatas})
-
-
-
-
-    /* THE SITE DELETED THIS PLACE IN THE WEBSITE */
-    //async function getDailyGames(){
-    //  const browser = await puppeteer.launch()
-    //  const page = await browser.newPage()
-
-    //  await page.goto("https://www.terra.com.br/esportes/futebol/copa-2022/tabela/");
-
-
-    //  const gamesContainer = await page.$$eval('.zaz-app-t360-ticker--match--info', el => el.map(item=> item.innerText))
-    //  const teamOneResult = await page.$eval('.team1', el => el.innerHTML)
-    //  const teamTwoResult = await page.$eval('.team2', el => el.innerHTML)
-
-      
-    //  return teamTwoResult
-    //}
-    //const gamesTest = await getDailyGames()
-    //res.json({gamesTest})
+    await res.send({topPlayers: bestPlayers, topTeams: teamsWithDatas})
   }
 };
