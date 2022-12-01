@@ -3,7 +3,6 @@ import style from '../styles/BestPlayers.module.css'
 
 const BestPlayers = ({data}) => {
   const [bestPlayers, setBestPlayers] = React.useState(data.slice(0,25))
-  console.log(data)
 
 
   return (
