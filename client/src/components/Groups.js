@@ -17,7 +17,7 @@ const Groups = ({ data }) => {
     <section className={style.groupContainer}>
       {data.map((grupo, index) => {
         return (
-          <table className={style.tableContainer} border="0">
+          <table key={grupos[index]} className={style.tableContainer} border="0">
             <h3 className={style.groupTitle}>{grupos[index]}</h3>
 
 

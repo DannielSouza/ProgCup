@@ -17,7 +17,7 @@ const BestPlayers = ({data}) => {
 
       {bestPlayers.map(player=>{
         return (
-          <li className={style.listContainer}>
+          <li key={player.nome} className={style.listContainer}>
             <div className={style.detailsContainer}>
               <img className={style.playerPicture} src={player.foto} alt={`foto do ${player.nome}`}/>
               <img className={style.teamPicture} src={player.selecao} alt={`foto da seleção`}/>

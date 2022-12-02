@@ -35,19 +35,25 @@ module.exports = class InfoController {
           return {
             bandeira: flagsTeams[flagTeamIndex],
             nome: teams.split("\n")[1].replace(" >>", ""),
+            
             resumo: {
-              pontos: teams.split("\n")[2].slice(0, 5)[0],
-              jogos: teams.split("\n")[2].slice(0, 5)[1],
-              vitorias: teams.split("\n")[2].slice(0, 5)[2],
-              empates: teams.split("\n")[2].slice(0, 5)[3],
-              derrotas: teams.split("\n")[2].slice(0, 5)[4],
+              pontos:teams.split("\n")[2].slice(0, 5)[0] === 1?  teams.split("\n")[2].slice(0, 5)[1]: teams.split("\n")[2].slice(0, 5)[0],
+              jogos:teams.split("\n")[2].slice(0, 5)[0] === 1? teams.split("\n")[2].slice(0, 5)[2]: teams.split("\n")[2].slice(0, 5)[1],
+              vitorias:teams.split("\n")[2].slice(0, 5)[0] === 1? teams.split("\n")[2].slice(0, 5)[3]: teams.split("\n")[2].slice(0, 5)[2],
+              empates:teams.split("\n")[2].slice(0, 5)[0] === 1? teams.split("\n")[2].slice(0, 5)[4]: teams.split("\n")[2].slice(0, 5)[3],
+              derrotas:teams.split("\n")[2].slice(0, 5)[0] === 1? teams.split("\n")[2].slice(0, 5)[5]: teams.split("\n")[2].slice(0, 5)[4]
             }
+          
           }
           
         })
       })
       await browser.close();
       return teamsWithDatas
+
+
+
+
     }
     
 
@@ -75,5 +81,7 @@ module.exports = class InfoController {
     const bestPlayers = await getBestPlayers()
     const teamsWithDatas = await getTeamsInfo()
     await res.send({topPlayers: bestPlayers, topTeams: teamsWithDatas})
+
+    
   }
 };
